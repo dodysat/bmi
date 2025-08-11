@@ -70,26 +70,36 @@ function getVersionType() {
 
 function bumpVersion(versionType) {
   log(`📦 Bumping version (${versionType})...`, "blue");
-  
+
   // Check if we're in a git repository
   try {
-    execSync('git status', { stdio: 'ignore' });
+    execSync("git status", { stdio: "ignore" });
   } catch (error) {
-    log('❌ Not in a git repository. Please run this script from a git repository.', 'red');
+    log(
+      "❌ Not in a git repository. Please run this script from a git repository.",
+      "red"
+    );
     process.exit(1);
   }
-  
+
   // Check if the current version already exists on npm
-  const currentPackageJson = JSON.parse(fs.readFileSync("package.json", "utf8"));
+  const currentPackageJson = JSON.parse(
+    fs.readFileSync("package.json", "utf8")
+  );
   const currentVersion = currentPackageJson.version;
-  
+
   try {
-    execSync(`npm view @dodysat/bmi@${currentVersion} version`, { stdio: 'ignore' });
-    log(`⚠️  Version ${currentVersion} already exists on npm. Bumping version...`, "yellow");
+    execSync(`npm view @dodysat/bmi@${currentVersion} version`, {
+      stdio: "ignore",
+    });
+    log(
+      `⚠️  Version ${currentVersion} already exists on npm. Bumping version...`,
+      "yellow"
+    );
   } catch (error) {
     log(`ℹ️  Version ${currentVersion} is not yet published on npm.`, "blue");
   }
-  
+
   exec(`npm version ${versionType} --no-git-tag-version`);
 
   // Read the new version from package.json
