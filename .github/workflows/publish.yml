@@ -18,6 +18,7 @@ jobs:
         with:
           node-version: "22"
           registry-url: "https://registry.npmjs.org"
+          always-auth: true
 
       - name: Install dependencies
         run: npm ci
@@ -27,6 +28,11 @@ jobs:
 
       - name: Build package
         run: npm run build
+
+      - name: Verify npm auth user
+        run: npm whoami
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Publish to NPM
         run: npm publish --access public

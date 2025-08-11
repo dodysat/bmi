@@ -49,5 +49,9 @@
   "homepage": "https://github.com/dodysat/bmi#readme",
   "bugs": {
     "url": "https://github.com/dodysat/bmi/issues"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
   }
 }
