@@ -1,0 +1,43 @@
+{
+  "name": "@dodysat/bmi",
+  "version": "1.0.0",
+  "description": "A BMI calculator library following WHO (World Health Organization) standards",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/**/*"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "prepublishOnly": "npm run build",
+    "dev": "tsc --watch"
+  },
+  "keywords": [
+    "bmi",
+    "body-mass-index",
+    "health",
+    "who",
+    "calculator",
+    "fitness",
+    "weight",
+    "height"
+  ],
+  "author": "Dody Satria",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^29.5.5",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.1",
+    "typescript": "^5.2.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dodysat/bmi.git"
+  },
+  "homepage": "https://github.com/dodysat/bmi#readme",
+  "bugs": {
+    "url": "https://github.com/dodysat/bmi/issues"
+  }
+}
