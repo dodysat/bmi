@@ -1,6 +1,15 @@
 // Export types
 export * from "./types";
 
+// Export locale functions
+export {
+  getLocale,
+  getSupportedLocales,
+  isLocaleSupported,
+  type Locale,
+  type LocaleData
+} from "./locales";
+
 // Export main BMI calculator functions
 export {
   calculateBMI,
@@ -22,6 +31,7 @@ import {
 } from "./bmi-calculator";
 
 import { BMICategory, BMIResult, BMIInput, BMIThresholds } from "./types";
+import { getLocale, getSupportedLocales, isLocaleSupported, type Locale, type LocaleData } from "./locales";
 
 export default {
   calculateBMI,
@@ -31,4 +41,7 @@ export default {
   lbsToKg,
   WHO_BMI_THRESHOLDS,
   BMICategory,
+  getLocale,
+  getSupportedLocales,
+  isLocaleSupported,
 };

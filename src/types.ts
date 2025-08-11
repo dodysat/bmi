@@ -34,6 +34,8 @@ export interface BMIInput {
   weight: number;
   /** Height in meters */
   height: number;
+  /** Locale for localized output (optional, defaults to 'en') */
+  locale?: 'en' | 'id';
 }
 
 /**
