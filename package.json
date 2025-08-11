@@ -44,7 +44,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/dodysat/bmi.git"
+    "url": "git+https://github.com/dodysat/bmi.git"
   },
   "homepage": "https://github.com/dodysat/bmi#readme",
   "bugs": {
