@@ -1,6 +1,6 @@
 {
   "name": "@dodysat/bmi",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A BMI calculator library following WHO (World Health Organization) standards",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
